@@ -17,9 +17,10 @@
 		}
 	},
 	"lint-staged": {
-		"./src/*.js": [
-			"eslint --fix",
-			"prettier --write"
+		"src/**/*.js": [
+			"eslint --fix src/",
+			"prettier --write",
+			"git add"
 		]
 	},
 	"dependencies": {
