@@ -10,7 +10,7 @@ const options = {
 			contact: {
 				name: 'Swagger',
 				email: 'example@domain.com',
-			},
+			}
 		},
 		servers: [
 			{
