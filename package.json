@@ -9,7 +9,7 @@
 		"build": "rimraf build && babel src --out-dir build",
 		"start": "nodemon --watch src --exec babel-node src",
 		"serve": "node build/index.js",
-		"format": "prettier-standard 'src/**/*.js'"
+		"format": "prettier --write 'src/**/*.js'"
 	},
 	"husky": {
 		"hooks": {
@@ -17,9 +17,10 @@
 		}
 	},
 	"lint-staged": {
-		"./src/*.js": [
-			"eslint --fix",
-			"prettier --write"
+		"*.js": [
+			"eslint --fix src/",
+			"prettier --write",
+			"git add"
 		]
 	},
 	"dependencies": {
@@ -31,6 +32,7 @@
 		"helmet": "^3.21.2",
 		"http-status-codes": "^1.4.0",
 		"morgan": "^1.9.1",
+		"prettier": "^1.19.1",
 		"swagger-jsdoc": "^3.5.0",
 		"swagger-ui-express": "^4.1.2",
 		"winston": "^3.2.1",
@@ -49,7 +51,6 @@
 		"husky": "^4.0.6",
 		"lint-staged": "^9.5.0",
 		"nodemon": "^2.0.2",
-		"prettier-standard": "^16.1.0",
 		"rimraf": "^3.0.0"
 	}
 }
