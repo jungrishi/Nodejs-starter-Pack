@@ -1,5 +1,3 @@
-// /*eslint-disable*/
-
 import './env';
 import cors from 'cors';
 import express from 'express';
