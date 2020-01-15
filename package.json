@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "node knowledge",
 	"main": "index.js",
-	"author": "Rishi",
+	"author": "jungrishi",
 	"license": "MIT",
 	"scripts": {
 		"build": "rimraf build && babel src --out-dir build",
